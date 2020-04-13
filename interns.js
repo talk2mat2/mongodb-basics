@@ -3,9 +3,9 @@ var MongoClient = require('mongodb').MongoClient;
 MongoClient.connect(url, function(err, db) {   
     if (err) throw err;
     var dbase = db.db("Martins_c");
-    dbase.createCollection("interns", function(err, res) {
+    dbase.createCollection("myMovies", function(err, res) {
         if (err) throw err;
-        console.log("interns Collection created");
+        console.log("myMovies Collection created");
         db.close();   
     });
 });
